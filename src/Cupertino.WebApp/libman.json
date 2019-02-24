@@ -1,0 +1,361 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "angular.js@1.7.7",
+      "destination": "wwwroot/vendor/angularjs",
+      "files": [
+        "angular.min.js"
+      ]
+    },
+
+    // Used on Looper theme
+    {
+      "library": "ace@1.4.2",
+      "destination": "wwwroot/vendor/ace",
+      "files": [
+        "ace.js"
+      ]
+    },
+    {
+      "library": "at.js@1.5.4",
+      "destination": "wwwroot/vendor/at.js",
+      "files": [
+        "js/jquery.atwho.min.js",
+        "css/jquery.atwho.min.css"
+      ]
+    },
+    {
+      "library": "javascript-canvas-to-blob@3.14.0",
+      "destination": "wwwroot/vendor/blueimp-canvas-to-blob",
+      "files": [
+        "js/canvas-to-blob.min.js"
+      ]
+    },
+    {
+      "library": "blueimp-file-upload@9.28.0",
+      "destination": "wwwroot/vendor/blueimp-file-upload",
+      "files": [
+        "js/jquery.fileupload.min.js"
+      ]
+    },
+    {
+      "library": "blueimp-load-image@2.20.1",
+      "destination": "wwwroot/vendor/blueimp-load-image",
+      "files": [
+        "load-image.min.js"
+      ]
+    },
+    {
+      "library": "blueimp-JavaScript-Templates@3.11.0",
+      "destination": "wwwroot/vendor/blueimp-tmpl",
+      "files": [
+        "js/tmpl.min.js"
+      ]
+    },
+    {
+      "library": "twitter-bootstrap@4.2.1",
+      "destination": "wwwroot/vendor/bootstrap",
+      "files": [
+        "js/bootstrap.bundle.min.js",
+        "css/bootstrap.min.css"
+      ]
+    },
+    {
+      "library": "bootstrap-touchspin@4.2.5",
+      "destination": "wwwroot/vendor/bootstrap-touchspin",
+      "files": [
+        "jquery.bootstrap-touchspin.min.js",
+        "jquery.bootstrap-touchspin.min.css"
+      ]
+    },
+    {
+      "library": "Chart.js@2.7.3",
+      "destination": "wwwroot/vendor/chart.js",
+      "files": [
+        "Chart.bundle.min.js"
+      ]
+    },
+    {
+      "library": "clipboard.js@2.0.4",
+      "destination": "wwwroot/vendor/clipboard",
+      "files": [
+        "clipboard.min.js"
+      ]
+    },
+    {
+      "library": "datatables@1.10.19",
+      "destination": "wwwroot/vendor/datatables",
+      "files": [
+        "js/dataTables.dataTables.min.js",
+        "css/dataTables.bootstrap4.min.css"
+      ]
+    },
+    {
+      "library": "easy-pie-chart@2.1.6",
+      "destination": "wwwroot/vendor/easy-pie-chart",
+      "files": [
+        "easypiechart.min.js"
+      ]
+    },
+    {
+      "library": "flatpickr@4.5.2",
+      "destination": "wwwroot/vendor/flatpickr",
+      "files": [
+        "flatpickr.min.js",
+        "flatpickr.min.css"
+      ]
+    },
+    {
+      "library": "flot@0.8.3",
+      "destination": "wwwroot/vendor/flot",
+      "files": [
+        "jquery.flot.min.js"
+      ]
+    },
+    {
+      "library": "font-awesome@4.7.0",
+      "destination": "wwwroot/vendor/fontawesome",
+      "files": [
+        "css/font-awesome.min.css",
+        "fonts/fontawesome-webfont.eot",
+        "fonts/fontawesome-webfont.svg",
+        "fonts/fontawesome-webfont.ttf",
+        "fonts/fontawesome-webfont.woff",
+        "fonts/fontawesome-webfont.woff2",
+        "fonts/FontAwesome.otf"
+      ]
+    },
+    {
+      "library": "frappe-gantt@0.3.0",
+      "destination": "wwwroot/vendor/frappe-gantt",
+      "files": [
+        "frappe-gantt.min.js",
+        "frappe-gantt.min.css"
+      ]
+    },
+    {
+      "library": "fullcalendar@3.10.0",
+      "destination": "wwwroot/vendor/fullcalendar",
+      "files": [
+        "fullcalendar.min.js",
+        "fullcalendar.min.css"
+      ]
+    },
+    {
+      "library": "handlebars.js@4.1.0",
+      "destination": "wwwroot/vendor/handlebars",
+      "files": [
+        "handlebars.min.js"
+      ]
+    },
+    {
+      "library": "highlight.js@9.14.2",
+      "destination": "wwwroot/vendor/highlight",
+      "files": [
+        "highlight.min.js"
+      ]
+    },
+    {
+      "library": "html2pdf.js@0.9.1",
+      "destination": "wwwroot/vendor/html2pdf.js",
+      "files": [
+        "html2pdf.bundle.min.js"
+      ]
+    },
+    {
+      "library": "jquery@3.3.1",
+      "destination": "wwwroot/vendor/jquery",
+      "files": [
+        "jquery.min.js"
+      ]
+    },
+    {
+      "library": "jquery.countdown@2.2.0",
+      "destination": "wwwroot/vendor/jquery-countdown",
+      "files": [
+        "jquery.countdown.min.js"
+      ]
+    },
+    {
+      "library": "jQuery-Knob@1.2.13",
+      "destination": "wwwroot/vendor/jquery-knob",
+      "files": [
+        "jquery.knob.min.js"
+      ]
+    },
+    {
+      "library": "jqvmap@1.5.1",
+      "destination": "wwwroot/vendor/jqvmap",
+      "files": [
+        "jquery.vmap.min.js",
+        "jqvmap.min.css"
+      ]
+    },
+    {
+      "library": "jstree@3.3.7",
+      "destination": "wwwroot/vendor/jstree",
+      "files": [
+        "jstree.min.js"
+      ]
+    },
+    {
+      "library": "KaTeX@0.10.0",
+      "destination": "wwwroot/vendor/katex",
+      "files": [
+        "katex.min.js",
+        "katex.min.css"
+      ]
+    },
+    {
+      "library": "masonry@4.2.2",
+      "destination": "wwwroot/vendor/masonry-layout",
+      "files": [
+        "masonry.pkgd.min.js"
+      ]
+    },
+    {
+      "library": "moment.js@2.24.0",
+      "destination": "wwwroot/vendor/moment",
+      "files": [ "moment.min.js" ]
+    },
+    {
+      "library": "nestable2@1.6.0",
+      "destination": "wwwroot/vendor/nestable2",
+      "files": [
+        "jquery.nestable.min.js",
+        "jquery.nestable.min.css"
+      ]
+    },
+    {
+      "library": "noUiSlider@13.1.1",
+      "destination": "wwwroot/vendor/nouislider",
+      "files": [
+        "nouislider.min.js",
+        "nouislider.min.css"
+      ]
+    },
+    {
+      "library": "open-iconic@1.1.1",
+      "destination": "wwwroot/vendor/open-iconic",
+      "files": [
+        "font/css/open-iconic-bootstrap.min.css"
+      ]
+    },
+    {
+      "library": "pace@1.0.2",
+      "destination": "wwwroot/vendor/pace",
+      "files": [
+        "pace.min.js"
+      ]
+    },
+    {
+      "library": "parsley.js@2.8.1",
+      "destination": "wwwroot/vendor/parsleyjs",
+      "files": [
+        "parsley.min.js"
+      ]
+    },
+    {
+      "library": "particles.js@2.0.0",
+      "destination": "wwwroot/vendor/particles.js",
+      "files": [
+        "particles.min.js"
+      ]
+    },
+    {
+      "library": "jquery.perfect-scrollbar@1.4.0",
+      "destination": "wwwroot/vendor/perfect-scrollbar",
+      "files": [
+        "perfect-scrollbar.min.js",
+        "css/perfect-scrollbar.min.css"
+      ]
+    },
+    {
+      "library": "photoswipe@4.1.3",
+      "destination": "wwwroot/vendor/photoswipe",
+      "files": [
+        "photoswipe.min.js",
+        "photoswipe.min.css"
+      ]
+    },
+    {
+      "library": "plyr@3.4.8",
+      "destination": "wwwroot/vendor/plyr",
+      "files": [
+        "plyr.min.js",
+        "plyr.css"
+      ]
+    },
+    {
+      "library": "quill@1.3.6",
+      "destination": "wwwroot/vendor/quill",
+      "files": [
+        "quill.min.js"
+      ]
+    },
+    {
+      "library": "select2@4.0.5",
+      "destination": "wwwroot/vendor/select2",
+      "files": [
+        "js/select2.full.min.js",
+        "css/select2.min.css"
+      ]
+    },
+    {
+      "library": "simplemde@1.11.2",
+      "destination": "wwwroot/vendor/simplemde",
+      "files": [
+        "simplemde.min.js",
+        "simplemde.min.css"
+      ]
+    },
+    {
+      "library": "Sortable@1.8.3",
+      "destination": "wwwroot/vendor/sortablejs",
+      "files": [
+        "Sortable.min.js"
+      ]
+    },
+    {
+      "library": "summernote@0.8.11",
+      "destination": "wwwroot/vendor/summernote",
+      "files": [
+        "summernote.min.js",
+        "summernote.css"
+      ]
+    },
+    {
+      "library": "tablesaw@3.1.0",
+      "destination": "wwwroot/vendor/tablesaw",
+      "files": [
+        "tablesaw.min.js",
+        "tablesaw.min.css"
+      ]
+    },
+    {
+      "library": "toastr.js@2.1.4",
+      "destination": "wwwroot/vendor/toastr",
+      "files": [
+        "toastr.min.js",
+        "toastr.min.css"
+      ]
+    },
+    {
+      "library": "tributejs@3.5.3",
+      "destination": "wwwroot/vendor/tributejs",
+      "files": [
+        "tribute.min.js",
+        "tribute.min.css"
+      ]
+    },
+    {
+      "library": "typeahead.js@0.11.1",
+      "destination": "wwwroot/vendor/typeahead.js",
+      "files": [
+        "bloodhound.min.js"
+      ]
+    }
+  ]
+}
