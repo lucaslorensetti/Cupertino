@@ -14,6 +14,9 @@
 
 
   <ItemGroup>
+    <Folder Include="wwwroot\images\" />
+    <Folder Include="wwwroot\javascript\" />
+    <Folder Include="wwwroot\stylesheets\" />
     <Folder Include="wwwroot\vendor\angularjs\" />
     <Folder Include="wwwroot\views\" />
   </ItemGroup>
