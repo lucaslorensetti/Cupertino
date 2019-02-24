@@ -3,6 +3,7 @@ language: csharp
 mono: none
 solution: Cupertino.sln
 dotnet: 2.2
+dist: xenial
 script:
     - dotnet restore
     - dotnet build
