@@ -20,6 +20,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configurations", "Configurations", "{BF4FE9C0-8C3A-4607-88CF-0FCA15F802EB}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
+		.travis.yml = .travis.yml
 	EndProjectSection
 EndProject
 Global
