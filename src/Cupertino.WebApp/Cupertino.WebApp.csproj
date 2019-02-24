@@ -6,6 +6,13 @@
     <TypeScriptToolsVersion>3.1</TypeScriptToolsVersion>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="wwwroot\vendor\angularjs\**" />
+    <Content Remove="wwwroot\vendor\angularjs\**" />
+    <EmbeddedResource Remove="wwwroot\vendor\angularjs\**" />
+    <None Remove="wwwroot\vendor\angularjs\**" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
@@ -17,7 +24,7 @@
     <Folder Include="wwwroot\images\" />
     <Folder Include="wwwroot\javascript\" />
     <Folder Include="wwwroot\stylesheets\" />
-    <Folder Include="wwwroot\vendor\angularjs\" />
+    <Folder Include="wwwroot\vendor\sb-admin-2\" />
     <Folder Include="wwwroot\views\" />
   </ItemGroup>
 
