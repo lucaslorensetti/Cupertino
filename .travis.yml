@@ -1,7 +1,7 @@
 language: csharp
 mono: none
 solution: Cupertino.sln
-dotnet: 2.2.103
+dotnet: 2.2.104
 script:
     - dotnet restore
     - dotnet test
