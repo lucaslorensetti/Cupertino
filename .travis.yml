@@ -1,7 +1,9 @@
+sudo: required
 language: csharp
 mono: none
 solution: Cupertino.sln
-dotnet: 2.2.104
+dotnet: 2.2
 script:
     - dotnet restore
-    - dotnet test
+    - dotnet build
+    - dotnet test tests/Cupertino.Services.Tests.csproj
