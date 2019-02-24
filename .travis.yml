@@ -7,4 +7,4 @@ dist: xenial
 script:
     - dotnet restore
     - dotnet build
-    - dotnet test tests/Cupertino.Services.Tests.csproj
+    - dotnet test test/Cupertino.Services.Tests.csproj
