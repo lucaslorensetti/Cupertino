@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Rewrite;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -29,7 +24,34 @@ namespace Cupertino.WebApp
         {
             app.UseHsts();
             app.UseHttpsRedirection();
+            app.UseRewriter();
+
+            ForceLoadIndex(app);
+
             app.UseStaticFiles();
+
+            ForceRedirectToIndex(app);
+        }
+
+        private static void ForceRedirectToIndex(IApplicationBuilder app)
+        {
+            app.Run((context) =>
+            {
+                if (!context.Request.Path.Value.StartsWith("/vendor"))
+                {
+                    context.Response.Redirect("/");
+                }
+
+                return Task.FromResult(0);
+            });
+        }
+
+        private static void ForceLoadIndex(IApplicationBuilder app)
+        {
+            var options = new DefaultFilesOptions();
+            options.DefaultFileNames.Clear();
+            options.DefaultFileNames.Add("index.html");
+            app.UseDefaultFiles(options);
         }
     }
 }

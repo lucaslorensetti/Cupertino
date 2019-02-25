@@ -16,16 +16,14 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
-    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
   </ItemGroup>
 
 
   <ItemGroup>
-    <Folder Include="wwwroot\images\" />
-    <Folder Include="wwwroot\javascript\" />
-    <Folder Include="wwwroot\stylesheets\" />
+    <Folder Include="wwwroot\img\" />
+    <Folder Include="wwwroot\css\" />
+    <Folder Include="wwwroot\js\services\" />
     <Folder Include="wwwroot\vendor\sb-admin-2\" />
-    <Folder Include="wwwroot\views\" />
   </ItemGroup>
 
 </Project>
