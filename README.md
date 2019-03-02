@@ -1,7 +1,6 @@
 # Cupertino
 
 [![Build Status](https://travis-ci.com/lucaslorensetti/Cupertino.svg?branch=master)](https://travis-ci.com/lucaslorensetti/Cupertino)
-[![Coverage Status](https://coveralls.io/repos/github/lucaslorensetti/Cupertino/badge.svg?branch=master)](https://coveralls.io/github/lucaslorensetti/Cupertino?branch=master)
 
 Cupertino is a template that use on front-end:
 - AngularJS
