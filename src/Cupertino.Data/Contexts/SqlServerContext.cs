@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
+﻿using System.Linq;
 using System.Threading.Tasks;
 using Cupertino.Core;
 using Cupertino.Core.Common;
@@ -22,28 +19,10 @@ namespace Cupertino.Data.Contexts
         public DbSet<Screen> Screens { get; set; }
         public DbSet<User> Users { get; set; }
 
-        public async Task<bool> AnyAsync<TEntity>(Expression<Func<TEntity, bool>> filter)
-            where TEntity : class, IEntity
+        public IQueryable<TEntity> GetQueryable<TEntity>()
+             where TEntity : class, IEntity
         {
-            return await this.Set<TEntity>().AnyAsync(filter);
-        }
-
-        public async Task<TEntity> FirstOrDefaultAsync<TEntity>(Expression<Func<TEntity, bool>> filter)
-            where TEntity : class, IEntity
-        {
-            return await this.Set<TEntity>().FirstOrDefaultAsync(filter);
-        }
-
-        public async Task<IEnumerable<TEntity>> ToListAsync<TEntity>(Expression<Func<TEntity, bool>> filter)
-            where TEntity : class, IEntity
-        {
-            return await this.Set<TEntity>().Where(filter).ToListAsync();
-        }
-
-        public async Task<IEnumerable<TSelect>> ToListAsync<TEntity, TSelect>(Expression<Func<TEntity, bool>> filter, Expression<Func<TEntity, TSelect>> selector)
-            where TEntity : class, IEntity
-        {
-            return await this.Set<TEntity>().Where(filter).Select(selector).ToListAsync();
+            return this.Set<TEntity>();
         }
 
         public async Task InsertAsync<TEntity>(TEntity entity)
@@ -92,5 +71,7 @@ namespace Cupertino.Data.Contexts
         {
             return Task.FromResult(this.ChangeTracker.HasChanges());
         }
+
+      
     }
 }

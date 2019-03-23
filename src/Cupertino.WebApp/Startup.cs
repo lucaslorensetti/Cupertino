@@ -5,8 +5,6 @@ using Cupertino.Data.Contexts;
 using Cupertino.Data.Repositories;
 using Cupertino.Data.Repositories.Contracts;
 using Cupertino.Data.UoW;
-using Cupertino.Services;
-using Cupertino.Services.Contracts;
 using Cupertino.WebApp.Middlewares;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -50,9 +48,7 @@ namespace Cupertino.WebApp
             // Repositories
             services.AddScoped<IErrorRepository, ErrorRepository>();
             services.AddScoped<IUserRepository, UserRepository>();
-
-            // Services
-            services.AddScoped<IUserService, UserService>();
+            
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)

@@ -1,9 +1,8 @@
-﻿using Cupertino.Core;
-using Cupertino.Services.Tests.Mockers;
+﻿using Cupertino.Services.Tests.Mockers;
 
 namespace Cupertino.Services.Tests
 {
-    public class Service : IService
+    public class Service
     {
         internal readonly RepositoryMocker repositoryMocker;
 

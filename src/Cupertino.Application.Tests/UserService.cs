@@ -1,4 +1,4 @@
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Cupertino.Data.Entities;
 using Xunit;
 
@@ -17,12 +17,12 @@ namespace Cupertino.Services.Tests
                 Password = "111"
             });
 
-            var final = await userRepository.GetManyAsync(
-                x => x.Email == "lucas@loresoft.com.br",
-                x => new
-                {
-                    x.Password
-                });
+            //var final = await userRepository.GetManyAsync(
+            //    x => x.Email == "lucas@loresoft.com.br",
+            //    x => new
+            //    {
+            //        x.Password
+            //    });
 
             //var userService = new Cupertino.Services.UserService(userRepository);
 

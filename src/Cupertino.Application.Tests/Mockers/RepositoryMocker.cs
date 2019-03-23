@@ -1,8 +1,6 @@
 ﻿using Cupertino.Core;
 using Cupertino.Data.Contexts;
 using Cupertino.Data.Entities;
-using Cupertino.Data.Repositories;
-using Microsoft.EntityFrameworkCore;
 
 namespace Cupertino.Services.Tests.Mockers
 {
@@ -12,19 +10,20 @@ namespace Cupertino.Services.Tests.Mockers
 
         public RepositoryMocker()
         {
-            var options = new DbContextOptionsBuilder<DbContext>()
-                .UseInMemoryDatabase("CupertinoInMemory")
-                .Options;
+            //var options = new DbContextOptionsBuilder<DbContext>()
+            //    .UseInMemoryDatabase("CupertinoInMemory")
+            //    .Options;
 
-            this.sqlServerContext = new SqlServerContext(options);
-            this.sqlServerContext.Database.EnsureDeleted();
-            this.sqlServerContext.Database.EnsureCreated();
+            //this.sqlServerContext = new SqlServerContext(options);
+            //this.sqlServerContext.Database.EnsureDeleted();
+            //this.sqlServerContext.Database.EnsureCreated();
         }
 
         public IRepository<TEntity> GetRepository<TEntity>()
             where TEntity : Entity
         {
-            return new Repository<TEntity>(this.sqlServerContext);
+            //return new Repository<TEntity>(this.sqlServerContext);
+            return null;
         }
     }
 }
