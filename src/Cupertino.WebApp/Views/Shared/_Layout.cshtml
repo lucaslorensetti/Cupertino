@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html ng-app="cupertino">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Cupertino</title>
+
+    @await Html.PartialAsync("_Styles")
+    @RenderSection("styles", false)
+
+</head>
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">Cupertino</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        @RenderBody()
+    </div>
+
+    
+    @await  Html.PartialAsync("_Scripts")
+    @RenderSection("scripts", false)
+
+</body>
+</html>
