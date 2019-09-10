@@ -29,6 +29,7 @@
                 let modal = $uibModal.open({
                     templateUrl: templateUrl,
                     size: 'lg',
+                    backdrop: 'static',
                     controller: 'productAddEditController',
                     resolve: {
                         productId: () => productId

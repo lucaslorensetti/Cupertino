@@ -4,7 +4,7 @@
         <div class="panel-body">
             <div class="row">
                 <div class="col-md-12">
-                    <button ng-click="add()" class="btn btn-success">Add</button>
+                    <button ng-click="add()" class="btn btn-primary">Add</button>
                 </div>
             </div>
         </div>
@@ -12,8 +12,8 @@
             <thead>
                 <tr>
                     <th>Name</th>
-                    <th>Value</th>
                     <th>Brand</th>
+                    <th>Options</th>
                 </tr>
             </thead>
             <tbody>
@@ -21,7 +21,7 @@
                     <td>{{ product.name }}</td>
                     <td>{{ product.brand }}</td>
                     <td width="100px">
-                        <button ng-click="edit(product.id)" class="btn btn-xs btn-warning">Edit</button>
+                        <button ng-click="edit(product.id)" class="btn btn-xs btn-primary">Edit</button>
                         <button ng-click="delete(product.id)" class="btn btn-xs btn-danger">Delete</button>
                     </td>
                 </tr>
