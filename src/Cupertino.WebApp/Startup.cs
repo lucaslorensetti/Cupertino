@@ -1,9 +1,10 @@
 ﻿using System.IO;
+using Cupertino.Application.Services.Product;
 using Cupertino.Core;
 using Cupertino.Core.Common;
 using Cupertino.Data.Contexts;
+using Cupertino.Data.Entities;
 using Cupertino.Data.Repositories;
-using Cupertino.Data.Repositories.Contracts;
 using Cupertino.Data.UoW;
 using Cupertino.WebApp.Middlewares;
 using Microsoft.AspNetCore.Builder;
@@ -28,12 +29,6 @@ namespace Cupertino.WebApp
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.Configure<CookiePolicyOptions>(options =>
-            {
-                options.CheckConsentNeeded = context => true;
-                options.MinimumSameSitePolicy = SameSiteMode.None;
-            });
-
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Latest);
 
             // Contexts
@@ -46,43 +41,27 @@ namespace Cupertino.WebApp
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             // Repositories
-            services.AddScoped<IErrorRepository, ErrorRepository>();
-            services.AddScoped<IUserRepository, UserRepository>();
-            
+            services.AddScoped<IRepository<Product>, Repository<Product>>();
+
+            // Services
+            services.AddScoped<IProductService, ProductService>();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-            else
-            {
-                app.UseExceptionHandler("/Home/Error");
-                app.UseHsts();
-            }
+            app.UseDeveloperExceptionPage();
 
-            app.UseHttpsRedirection();
+            app.UseStaticFiles();
 
-            app.UseStaticFiles(new StaticFileOptions
-            {
-                FileProvider = new PhysicalFileProvider(Directory.GetCurrentDirectory()),
-                //RequestPath = "/"
-            });
-
-
-            app.UseCookiePolicy();
+            app.UseMiddleware<TransactionMiddleware>();
 
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Dashboard}/{action=Index}/{id?}");
+                    template: "{controller}/{action}",
+                    defaults: new { controller = "Product", action = "List" });
             });
-
-            app.UseMiddleware<ExceptionMiddleware>();
-            app.UseMiddleware<TransactionMiddleware>();
         }
     }
 }

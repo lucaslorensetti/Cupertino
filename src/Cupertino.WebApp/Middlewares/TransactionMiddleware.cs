@@ -6,16 +6,16 @@ namespace Cupertino.WebApp.Middlewares
 {
     public class TransactionMiddleware
     {
-        private readonly RequestDelegate next;
+        private RequestDelegate next;
 
         public TransactionMiddleware(RequestDelegate next)
         {
             this.next = next;
         }
 
-        public async Task InvokeAsync(HttpContext context, IUnitOfWork unitOfWork)
+        public async Task Invoke(HttpContext context, IUnitOfWork unitOfWork)
         {
-            await this.next(context);
+            await this.next.Invoke(context);
             await unitOfWork.CommitAsync();
         }
     }

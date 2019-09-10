@@ -1,1 +1,1 @@
-﻿angular.module("cupertino", []);
+﻿angular.module("cupertino", ["ui.bootstrap"]);

@@ -13,12 +13,13 @@ namespace Cupertino.Data.Contexts
         {
         }
 
-        public DbSet<Feature> Features { get; set; }
-        public DbSet<Group> Groups { get; set; }
-        public DbSet<Permission> Permissions { get; set; }
-        public DbSet<Screen> Screens { get; set; }
-        public DbSet<User> Users { get; set; }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+        }
 
+        public DbSet<Product> Products { get; set; }
+        
         public IQueryable<TEntity> GetQueryable<TEntity>()
              where TEntity : class, IEntity
         {
@@ -52,7 +53,7 @@ namespace Cupertino.Data.Contexts
 
         public async Task SaveChangesAsync()
         {
-            await this.SaveChangesAsync();
+            await base.SaveChangesAsync();
         }
 
         public Task CommitTransactionAsync()
@@ -71,7 +72,5 @@ namespace Cupertino.Data.Contexts
         {
             return Task.FromResult(this.ChangeTracker.HasChanges());
         }
-
-      
     }
 }

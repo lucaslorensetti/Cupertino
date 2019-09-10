@@ -1,0 +1,35 @@
+﻿@{ Layout = null; }
+
+<div>
+    <div class="panel panel-primary">
+        <div class="panel-heading panel-title">{{ product.Id ? 'Edit' : 'Add' }} product</div>
+        <div class="panel-body">
+            <h4>General data</h4>
+            <hr />
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group form-group-sm">
+                        <label>Name</label>
+                        <input ng-model="product.name" type="text" class="form-control" maxlength="128" placeholder="Ex.: Laptop">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group form-group-sm">
+                        <label>Brand</label>
+                        <input ng-model="product.brand" type="text" class="form-control" maxlength="128" placeholder="Ex.: HP">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-footer">
+            <div class="row">
+                <div class="pull-right">
+                    <div class="col-md-12 ">
+                        <button type="submit" ng-click="save()" class="btn btn-sm btn-success">Save</button>
+                        <button type="button" ng-click="cancel()" class="btn btn-sm btn-danger">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+﻿<div ng-controller="productListController">
+    <div class="panel panel-primary">
+        <div class="panel-heading">Products</div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <button ng-click="add()" class="btn btn-success">Add</button>
+                </div>
+            </div>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Value</th>
+                    <th>Brand</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="product in products">
+                    <td>{{ product.name }}</td>
+                    <td>{{ product.brand }}</td>
+                    <td width="100px">
+                        <button ng-click="edit(product.id)" class="btn btn-xs btn-warning">Edit</button>
+                        <button ng-click="delete(product.id)" class="btn btn-xs btn-danger">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

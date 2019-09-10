@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
+﻿using System.Linq;
 using System.Threading.Tasks;
+using Cupertino.Core.Models;
 
 namespace Cupertino.Core
 {
@@ -11,8 +9,8 @@ namespace Cupertino.Core
     {
         IQueryable<TEntity> GetQueryable();
 
-        Task InsertAsync(TEntity entity);
-        Task UpdateAsync(TEntity entity);
-        Task DeleteAsync(TEntity entity);
+        Task<OperationResult> InsertAsync(TEntity entity);
+        Task<OperationResult> UpdateAsync(TEntity entity);
+        Task<OperationResult> DeleteAsync(TEntity entity);
     }
 }

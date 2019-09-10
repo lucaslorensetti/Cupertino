@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
@@ -6,10 +6,18 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Commands\" />
+    <Compile Remove="Commands\**" />
+    <EmbeddedResource Remove="Commands\**" />
+    <None Remove="Commands\**" />
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Mockers\" />
+    <Folder Include="Stubs\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Moq" Version="4.13.0" />
     <PackageReference Include="xunit" Version="2.4.1" />
     <PackageReference Include="xunit.analyzers" Version="0.10.0" />
     <PackageReference Include="xunit.runner.console" Version="2.4.1">

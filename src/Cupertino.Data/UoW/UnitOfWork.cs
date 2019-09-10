@@ -29,7 +29,7 @@ namespace Cupertino.Data.UoW
 
                 await this.dbContext.CommitTransactionAsync();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 await this.dbContext.RollbackTransactionAsync();
                 throw;
